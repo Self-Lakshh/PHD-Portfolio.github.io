@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Chopra's Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/nav-footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav_logo">Lakshya Chopra</a>                
+            <ul class="nav_list">
+                <li><a href="#home" class="nav_link">Home</a></li>
+                <li><a href="#researches" class="nav_link">Researches</a></li>
+                <li><a href="#publications" class="nav_link">Publications</a></li>
+                <li><a href="#resume" class="nav_link">Resume</a></li>
+                <li><a href="#contact" class="nav_link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about" id="home">
+        <div class="container">
+            <div class="about_container">
+                <div class="about_data">
+                    <h1 class="about_title">Hi, I'am<br> Lakshya </h1>
+                    <h3 class="about_subtitle">Data Analyst</h3>
+                    <p class="about_description">High level experience in data analytical knowledge and digital banking with quality work.</p>
+                    <a href="#contact" class="about_button">Contact Me </a>
+                </div>
+                <div class="about_img">
+                    <svg class="about_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
+                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775
+                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666
+                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" fill="red"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <image class="about_blob-img" x="0" y="0" width="200" height="187" xlink:href="assets/lakshh.jpg"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Carousel Design -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio__header">
+                <h2 class="section__title">Portfolio</h2>
+                <span class="section__subtitle">Most recent works</span>
+            </div>
+    
+            <div class="carousel-container">
+                <div class="carousel" id="portfolio-carousel">
+                    <!-- Carousel Slide 1 -->
+                    <div class="carousel__slide active">
+                        <div class="carousel__image">
+                            <img src="assets/carousel1.jpg" alt="Modern Dashboard">
+                        </div>
+                        <div class="carousel__content">
+                            <h3 class="carousel__title">Modern Dashboard</h3>
+                            <p class="carousel__description">Data analytical dashboard adaptable to all devices, with UI components and animated interactions.</p>
+                            <a href="#" class="button button--flex button--small carousel__button">Demo</a>
+                        </div>
+                    </div>
+    
+                    <!-- Carousel Slide 2 -->
+                    <div class="carousel__slide">
+                        <div class="carousel__image">
+                            <img src="./packages/images/portfolio3.PNG" alt="E-Commerce Website">
+                        </div>
+                        <div class="carousel__content">
+                            <h3 class="carousel__title">E-Commerce Website</h3>
+                            <p class="carousel__description">Above Amazon clone is adaptable to all devices, with UI components and animated interactions.</p>
+                            <a href="#" class="button button--flex button--small carousel__button">Demo</a>
+                        </div>
+                    </div>
+    
+                    <!-- Carousel Slide 3 -->
+                    <div class="carousel__slide">
+                        <div class="carousel__image">
+                            <img src="./packages/images/portfolio2.png" alt="Brand Design">
+                        </div>
+                        <div class="carousel__content">
+                            <h3 class="carousel__title">Brand Design</h3>
+                            <p class="carousel__description">Tesla Clone is adaptable to all devices, with UI components and animated interactions.</p>
+                            <a href="#" class="button button--flex button--small carousel__button">Demo</a>
+                        </div>
+                    </div>
+    
+                    <!-- Navigation Arrows -->
+                    <div class="carousel-controls">
+                        <span class="carousel-arrow" id="portfolio-prev">&lt;</span>
+                        <span class="carousel-arrow" id="portfolio-next">&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#researches">Researches</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-socials">
+                    <a href="#" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2024 Lakshya Chopra. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+    <script src="javascript/script.js"></script>
+</body>
+</html>

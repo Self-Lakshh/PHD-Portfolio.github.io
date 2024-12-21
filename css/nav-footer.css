@@ -1,0 +1,129 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px var(--footer-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav_logo {
+    font-size: 24px;
+    color: var(--font-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav_list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav_list li {
+    margin: 0;
+}
+
+.nav_link {
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 0.5rem;
+    font-size: 16px;
+    color: var(--font-color);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav_link:after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    background: var(--hover-color);
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    transition: left 0.5s ease, width 0.5s ease;
+}
+
+.nav_link:hover {
+    color: var(--hover-color);
+}
+
+.nav_link:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+.footer {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: var(--footer-row-bg);
+    border-bottom: 2px solid var(--divider-color);
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.footer-links ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin: 0 20px;
+}
+
+.footer-links a {
+    color: var(--font-color);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--hover-color);
+}
+
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-socials a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: var(--font-color);
+    opacity: 0.75;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    opacity: 1;
+    color: var(--hover-color);
+}
