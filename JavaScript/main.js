@@ -39,12 +39,12 @@ function renderPublications(publications) {
 
         card.innerHTML = `
             <div class="card shadow-sm d-flex flex-row align-items-center" data-aos="fade-up">
-                <img src="${pub.image}" class="card-img-left border border-end img-fluid p-3" alt="${pub.title}" style="max-width: 120px; height: 150px;">
+                <img src="${pub.image}" class="card-img-left border border-end img-fluid m-2" alt="${pub.title}" style="max-width: 120px; height: 150px;">
                 <div class="card-body">
                     <h6 class="card-title">${pub.title}</h6>
                     <p class="card-text">${pub.description}</p>
                     <div class="d-flex justify-content-between">
-                        <a href="${pub.readMoreLink}" class="btn btn-link p-0">Read More</a>
+                        <a href="${pub.readMoreLink}" target="_blank" class="btn btn-link p-0">Read More</a>
                         <p class="text-muted mb-1 pe-1">Published: ${new Date(pub.date).toLocaleDateString()}</p>
                     </div>
                 </div>
