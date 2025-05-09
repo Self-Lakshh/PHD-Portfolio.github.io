@@ -51,8 +51,7 @@
                             data-aos-delay="200">Recipes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/pages/mywork.html" data-aos="fade-right"
-                            data-aos-delay="300">My
+                        <a class="nav-link" href="/pages/mywork.html" data-aos="fade-right" data-aos-delay="300">My
                             Work</a>
                     </li>
                     <li class="nav-item">
@@ -100,8 +99,19 @@
 
     <!-- Main Content -->
     <main class="container-fluid my-2 p-0">
+
+        <!-- Search Bar -->
+        <div class="container my-4">
+            <div class="row justify-content-center">
+                <div class="col-12" style="margin-top: 60px;">
+                    <input type="text" id="searchInput" class="form-control"
+                        placeholder="Search recipes by name or ingredients">
+                </div>
+            </div>
+        </div>
+          
         <!-- Jowar -->
-        <section id="jowar" class="py-5 bg-light mt-5" data-aos="fade-down">
+        <section id="jowar" class="py-5 bg-light mt-3" data-aos="fade-down">
             <div class="container py-3">
                 <div class="row justify-content-center align-items-center text-center text-md-start mb-5">
                     <!-- Left Side: Text -->
@@ -534,25 +544,50 @@
         </div>
     </footer>
 
+    <!-- Searching Script -->
+    <script>
+        document.getElementById("searchButton").addEventListener("click", function () {
+            const input = document.getElementById("recipeSearchInput").value.toLowerCase();
+            const procedureItems = document.querySelectorAll("#bajra-bhajia .card:nth-child(1) li");
+            const ingredientItems = document.querySelectorAll("#bajra-bhajia .card:nth-child(2) li");
+
+            const filterList = (items) => {
+                items.forEach((item) => {
+                    const text = item.innerText.toLowerCase();
+                    if (text.includes(input)) {
+                        item.style.display = "";
+                        item.classList.add("bg-warning", "rounded", "px-2");
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            };
+
+            if (input.trim() === "") {
+                [...procedureItems, ...ingredientItems].forEach((item) => {
+                    item.style.display = "";
+                    item.classList.remove("bg-warning", "rounded", "px-2");
+                });
+            } else {
+                filterList(procedureItems);
+                filterList(ingredientItems);
+            }
+        });
+    </script>
+
     <!-- Navbar Script -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const navLinks = document.querySelectorAll(".nav-link");
-
             const currentUrl = window.location.pathname;
-
             navLinks.forEach(link => {
                 if (currentUrl === link.getAttribute("href")) {
                     link.classList.add("active");
                 }
-
                 link.addEventListener("click", function (e) {
                     e.preventDefault();
-
                     navLinks.forEach(nav => nav.classList.remove("active"));
-
                     this.classList.add("active");
-
                     const targetUrl = this.getAttribute("href");
                     window.location.href = targetUrl;
                 });
