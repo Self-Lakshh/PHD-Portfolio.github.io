@@ -98,14 +98,17 @@
 
         <!-- Search Bar -->
         <div class="container my-4">
-            <div class="row justify-content-center">
-                <div class="col-12" style="margin-top: 60px;">
-                    <input type="text" id="searchInput" class="form-control"
+            <div class="row justify-content-center" style="margin-top: 60px;"">
+                <div class="col-10" ">
+                    <input type="text" id="recipeSearch" class="form-control"
                         placeholder="Search recipes by name or ingredients">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-danger" id="searchBtn">Reset Filter</button>
                 </div>
             </div>
         </div>
-          
+
         <!-- Jowar -->
         <section id="jowar" class="py-5 bg-light mt-3" data-aos="fade-down">
             <div class="container py-3">
@@ -131,7 +134,8 @@
 
                 <div class="row mt-4">
                     <!-- Recipe : Jowar Khichdi -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="jowar-khichdi" data-ingredients="whole jowar, milk" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -149,7 +153,8 @@
                     </div>
 
                     <!-- Recipe : Jowar Chilla -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="jowar-chilla" data-ingredients="jowar flour, buttermilk, ginger-garlic paste" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -167,7 +172,8 @@
                     </div>
 
                     <!-- Recipe : Jowar Pongal -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="jowar-pongal" data-ingredients="dry roasted jowar, split moong dal, jaggery, milk, ghee, cardamom, cashews, almonds, raisins" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -185,7 +191,8 @@
                     </div>
 
                     <!-- Recipe : Jowar Laddu -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="jowar-ladoos" data-ingredients="jowar flour, sugar, ghee, almonds" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -231,7 +238,8 @@
 
                 <div class="row mt-4">
                     <!-- Recipe : Kodon Kheer -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="kodon-kheer" data-ingredients="kodon, milk, desiccated coconut, cashew nuts, raisins, chironji, ghee, khoya, sugar" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -249,7 +257,8 @@
                     </div>
 
                     <!-- Recipe : Kodon Upma -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="kodon-upma" data-ingredients="kodon" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -295,7 +304,8 @@
 
                 <div class="row mt-4">
                     <!-- Recipe : Bajra Bhajia -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="bajra-bhajia" data-ingredients="bajra flour, jowar flour, ground chana dal" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -313,7 +323,8 @@
                     </div>
 
                     <!-- Recipe : Bajra Khichdi -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="bajra-khichdi" data-ingredients="bajra flour, moong dal, ghee, jaggery, hot water" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -356,7 +367,8 @@
 
                 <div class="row mt-4">
                     <!-- Recipe : Ragi Ladoos -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="ragi-ladoos" data-ingredients="ragi flour, milk, jaggery, khoya, ghee, cardamom" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -374,7 +386,8 @@
                     </div>
 
                     <!-- Recipe : Ragi Kheer -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="ragi-kheer" data-ingredients="ragi flour, milk, khoya, ghee, cardamom, sugar" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -382,7 +395,7 @@
                                 <img src="/assets/recipes/ragi-kheer.jpg" alt="Ragi Kheer"
                                     class="img-fluid w-100 rounded m-2" style="object-fit: cover; height: 80%;">
                                 <!-- Title -->
-                                <h4 class="text-center mt-2">Ragi Kheer"</h4>
+                                <h4 class="text-center mt-2">Ragi Kheer</h4>
                                 <!-- Button -->
                                 <a href="/pages/recipes/ragi-kheer.html" class="btn btn-primary rounded-pill my-2">
                                     View Recipe
@@ -417,7 +430,8 @@
 
                 <div class="row mt-4">
                     <!-- Recipe : Sanwa Cutlet -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="sanwa-cutlet" data-ingredients="sanwa, ground chana dal, curd, boiled potatoes" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -435,7 +449,8 @@
                     </div>
 
                     <!-- Recipe : Sanwa Kheer -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="sanwa-kheer" data-ingredients="sanwa, milk, khoya, sugar" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -477,7 +492,8 @@
 
                 <div class="row mt-4">
                     <!-- Recipe : Kutki Dahi Rice -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="kutki-dahi-rice" data-ingredients="kutki, curd, curry leaves" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -495,7 +511,8 @@
                     </div>
 
                     <!-- Recipe : Kutki Patties -->
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-4 recipe-card" data-name="kutki-patties" data-ingredients="kutki" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="card shadow-cust border-light rounded-3 h-100">
                             <div class="card-body p-0 m-2 d-flex flex-column align-items-center"
                                 style="height: 400px; overflow: hidden;">
@@ -542,32 +559,89 @@
 
     <!-- Searching Script -->
     <script>
-        document.getElementById("searchButton").addEventListener("click", function () {
-            const input = document.getElementById("recipeSearchInput").value.toLowerCase();
-            const procedureItems = document.querySelectorAll("#bajra-bhajia .card:nth-child(1) li");
-            const ingredientItems = document.querySelectorAll("#bajra-bhajia .card:nth-child(2) li");
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById('recipeSearch');
+            const recipeCards = document.querySelectorAll('.recipe-card'); // All recipe cards
+            const sections = document.querySelectorAll('section'); // All sections
+            const resetButton = document.getElementById('searchBtn'); // Reset button
 
-            const filterList = (items) => {
-                items.forEach((item) => {
-                    const text = item.innerText.toLowerCase();
-                    if (text.includes(input)) {
-                        item.style.display = "";
-                        item.classList.add("bg-warning", "rounded", "px-2");
+            // Function to filter the recipes based on search input
+            function filterRecipes() {
+                const searchTerms = searchInput.value.toLowerCase().split(/\s+/).map(term => term.replace(/\s+/g, '-')); // Split input into terms and replace spaces with hyphens
+
+                if (searchTerms.length === 1 && searchTerms[0] === '') {
+                    resetFilter(); // If search bar is empty, reset the filter
+                    return;
+                }
+
+                let matchedCards = []; // Array to store matched cards
+
+                recipeCards.forEach(card => {
+                    const recipeName = card.getAttribute('data-name').toLowerCase(); // Get the recipe name from the data-name attribute
+                    const ingredients = card.getAttribute('data-ingredients')?.toLowerCase() || ''; // Get the ingredients from the data-ingredients attribute
+
+                    // Check if all search terms match either the recipe name or the ingredients
+                    const isMatch = searchTerms.every(term => recipeName.includes(term) || ingredients.includes(term));
+
+                    if (isMatch) {
+                        card.style.display = "block"; // Show the card if it matches all search terms
+                        matchedCards.push(card); // Add to matched cards
                     } else {
-                        item.style.display = "none";
+                        card.style.display = "none"; // Hide the card if it doesn't match
                     }
                 });
-            };
 
-            if (input.trim() === "") {
-                [...procedureItems, ...ingredientItems].forEach((item) => {
-                    item.style.display = "";
-                    item.classList.remove("bg-warning", "rounded", "px-2");
+                // Hide all sections initially
+                sections.forEach(section => {
+                    section.style.display = "none";
                 });
-            } else {
-                filterList(procedureItems);
-                filterList(ingredientItems);
+
+                // Create a temporary section to display matched cards side-by-side
+                let tempSection = document.getElementById('temp-section');
+                if (!tempSection) {
+                    tempSection = document.createElement('section');
+                    tempSection.id = 'temp-section';
+                    tempSection.className = 'py-5 bg-light';
+                    tempSection.innerHTML = '<div class="container"><div class="row" id="temp-row"></div></div>';
+                    document.querySelector('main').appendChild(tempSection);
+                }
+
+                const tempRow = document.getElementById('temp-row');
+                tempRow.innerHTML = ''; // Clear previous results
+
+                if (matchedCards.length > 0) {
+                    tempSection.style.display = "block"; // Show the temporary section
+                    matchedCards.forEach(card => {
+                        tempRow.appendChild(card.cloneNode(true)); // Add matched cards to the temporary row
+                    });
+                } else {
+                    tempSection.style.display = "none"; // Hide the temporary section if no matches
+                }
             }
+
+            // Function to reset the filter and restore the default view
+            function resetFilter() {
+                recipeCards.forEach(card => {
+                    card.style.display = "block"; // Show all recipe cards
+                });
+
+                sections.forEach(section => {
+                    section.style.display = "block"; // Show all sections
+                });
+
+                const tempSection = document.getElementById('temp-section');
+                if (tempSection) {
+                    tempSection.style.display = "none"; // Hide the temporary section
+                }
+
+                searchInput.value = ''; // Clear the search input
+            }
+
+            // Listen for input events on the search field
+            searchInput.addEventListener('input', filterRecipes);
+
+            // Listen for click events on the reset button
+            resetButton.addEventListener('click', resetFilter);
         });
     </script>
 
