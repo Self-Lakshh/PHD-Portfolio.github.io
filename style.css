@@ -1,6 +1,7 @@
 :root {
   /* Primary color scheme */
-  --primary-color: #007bff; /* Main Color */
+  --primary-color: #007bff;
+  /* Main Color */
   --secondary-color: #6c757d;
   --dark-color: #343a40;
 
@@ -73,13 +74,14 @@ h6 {
 
 .nav-link.active {
   font-weight: bold;
-  color: #0d6efd !important; /* Bootstrap primary */
+  color: #0d6efd !important;
+  /* Bootstrap primary */
 }
 
 /* Stronger overrides to ensure blue active link in all nav contexts */
 .navbar .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .show>.nav-link,
 .offcanvas .nav-link.active {
   color: var(--primary-color) !important;
 }
@@ -109,7 +111,8 @@ h6 {
 #about-authors .author-intro {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5; /* visible lines */
+  -webkit-line-clamp: 5;
+  /* visible lines */
   line-clamp: 5;
   overflow: hidden;
 }
@@ -117,6 +120,48 @@ h6 {
 #about-authors .author-intro.expanded {
   -webkit-line-clamp: unset;
   line-clamp: unset;
+}
+
+/* Millets & Malting Section Custom Styles */
+#about {
+  background: #f8fafc;
+}
+
+#about .display-5 {
+  letter-spacing: 1px;
+}
+
+#about .card {
+  border-radius: 1.3rem;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+}
+
+#about .badge {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  letter-spacing: 0.5px;
+}
+
+#about img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 767px) {
+  #about .display-5 {
+    font-size: 2rem;
+  }
+
+  #about .card-body {
+    padding: 1rem;
+  }
+
+  #about img {
+    max-height: 180px !important;
+  }
 }
 
 #about-authors .intro-toggle {
@@ -163,6 +208,7 @@ h6 {
     width: 144px;
     height: 144px;
   }
+
   #about-authors .author-intro {
     -webkit-line-clamp: 4;
     line-clamp: 4;

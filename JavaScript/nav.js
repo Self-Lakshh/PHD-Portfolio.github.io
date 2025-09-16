@@ -23,13 +23,10 @@
 								<a class="nav-link" data-nav-id="home" href="${base}index.html#home">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" data-nav-id="about" href="${base}index.html#about">About Me</a>
+								<a class="nav-link" data-nav-id="recipes" href="${base}pages/recipes.html">Recipe</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" data-nav-id="aboutauthor" href="${base}pages/aboutauthors.html">About Author</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-nav-id="recipes" href="${base}pages/recipes.html">Recipes</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link btn btn-primary text-light px-4 rounded-5 shadow-sm" data-nav-id="contact" href="${base}index.html#contact">Contact</a>
@@ -50,13 +47,10 @@
 							<a class="nav-link" data-nav-id="home" href="${base}index.html#home">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-nav-id="about" href="${base}index.html#about">About Me</a>
+							<a class="nav-link" data-nav-id="recipes" href="${base}pages/recipes.html">Recipe</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" data-nav-id="aboutauthor" href="${base}pages/aboutauthors.html">About Author</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-nav-id="recipes" href="${base}pages/recipes.html">Recipes</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" data-nav-id="contact" href="${base}index.html#contact">Contact</a>
