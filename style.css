@@ -75,3 +75,102 @@ h6 {
   font-weight: bold;
   color: #0d6efd !important; /* Bootstrap primary */
 }
+
+/* Stronger overrides to ensure blue active link in all nav contexts */
+.navbar .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link,
+.offcanvas .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* About Authors – interactive card hover effects */
+#about-authors .card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#about-authors .card:hover {
+  transform: translateY(-6px);
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 22px;
+  border-color: var(--primary-color);
+}
+
+#about-authors .card .card-body img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#about-authors .card:hover .card-body img {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.08);
+}
+
+/* Clamp long bios to consistent height, with optional expand */
+#about-authors .author-intro {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* visible lines */
+  line-clamp: 5;
+  overflow: hidden;
+}
+
+#about-authors .author-intro.expanded {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+#about-authors .intro-toggle {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#about-authors .intro-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Consistent sizing and layout refinements */
+#about-authors .author-card {
+  border-left: 4px solid rgba(0, 123, 255, 0.12);
+}
+
+#about-authors .author-avatar {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.08);
+}
+
+#about-authors .author-name {
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+#about-authors .author-designation {
+  color: var(--dark-color);
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+#about-authors .author-content {
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  #about-authors .author-avatar {
+    width: 144px;
+    height: 144px;
+  }
+  #about-authors .author-intro {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #about-authors .card-body {
+    padding: 1rem !important;
+  }
+}

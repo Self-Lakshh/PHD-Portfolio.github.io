@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .about-us-section {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        .about-us-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-card {
+            background: var(--dark-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            flex: 1 1 300px;
+            max-width: 350px;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .profile-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .profile-role {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            background: #fff;
+            border-radius: var(--border-radius);
+            padding: 0.2rem 0.7rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .profile-desc {
+            font-size: 1rem;
+            color: #eee;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .about-us-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-card {
+                max-width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="about-us-section">
+        <div class="container">
+            <h1 style="text-align:center; color:var(--primary-color);">About Us</h1>
+            <div class="about-us-container">
+                <!-- Person 1 -->
+                <div class="profile-card">
+                    <img src="../assets/student.jpg" alt="Person 1" class="profile-img">
+                    <div class="profile-name">Dr. A. Sharma</div>
+                    <div class="profile-role">Lead Researcher</div>
+                    <div class="profile-desc">Expert in food science and nutrition, passionate about millet-based
+                        innovations and sustainable agriculture. Over 15 years of research experience.</div>
+                </div>
+                <!-- Person 2 -->
+                <div class="profile-card">
+                    <img src="../assets/research.jpeg" alt="Person 2" class="profile-img">
+                    <div class="profile-name">Prof. R. Singh</div>
+                    <div class="profile-role">Project Coordinator</div>
+                    <div class="profile-desc">Coordinator of multiple national research projects, specializing in crop
+                        formulation and technology transfer. Dedicated to empowering rural communities.</div>
+                </div>
+                <!-- Person 3 -->
+                <div class="profile-card">
+                    <img src="../assets/nlp.png" alt="Person 3" class="profile-img">
+                    <div class="profile-name">Ms. P. Verma</div>
+                    <div class="profile-role">Data Analyst</div>
+                    <div class="profile-desc">Skilled in data science and NLP, focusing on research analytics and
+                        digital outreach. Drives innovation through technology and collaboration.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
