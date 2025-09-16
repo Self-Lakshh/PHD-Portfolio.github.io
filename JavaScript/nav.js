@@ -10,10 +10,15 @@
 
 	function buildNavbarHtml() {
 		const base = getBaseHref(window.location.pathname);
+		// Always use absolute path for icon
+		const iconPath = '/assets/icon.png';
 		return (
 			`<nav class="navbar navbar-expand-lg navbar-light bg-light border-1 border-bottom fixed-top shadow-sm">
 				<div class="container-fluid px-4 py-1">
-					<a class="navbar-brand" href="${base}index.html">Millets Gyan</a>
+					<a class="navbar-brand d-flex align-items-center gap-2" href="${base}index.html">
+						<img src="${iconPath}" alt="Millets Icon" style="width:36px; height:36px; border-radius:50%; object-fit:cover; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+						Millets Gyan
+					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
 						<span class="navbar-toggler-icon"></span>
 					</button>
@@ -29,7 +34,7 @@
 								<a class="nav-link" data-nav-id="aboutauthor" href="${base}pages/aboutauthors.html">About Author</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link btn btn-primary text-light px-4 rounded-5 shadow-sm" data-nav-id="contact" href="${base}index.html#contact">Contact</a>
+								<a class="nav-link btn btn-primary text-light px-4 rounded-5 shadow-sm contact-nav-link" data-nav-id="contact" href="${base}index.html#contact">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -72,8 +77,7 @@
 		let activeId = "";
 		if (
 			pathLower.endsWith("/pages/recipes.html") ||
-			pathLower.includes("/pages/recipes/") ||
-			pathLower.includes("pages/recipes/")
+			pathLower.startsWith("/pages/recipes/")
 		) {
 			activeId = "recipes";
 		} else if (pathLower.endsWith("/pages/aboutauthors.html") || pathLower.endsWith("pages/aboutauthors.html")) {
@@ -91,7 +95,13 @@
 			const id = link.getAttribute("data-nav-id");
 			if (!id) return;
 			const listItem = link.closest("li");
-			if (id === activeId) {
+			if (id === "contact") {
+				// Always keep contact button white, never apply 'active'
+				link.classList.add("text-light");
+				link.classList.remove("active");
+				link.removeAttribute("aria-current");
+				if (listItem) listItem.classList.remove("active");
+			} else if (id === activeId) {
 				link.classList.add("active");
 				link.setAttribute("aria-current", "page");
 				if (listItem) listItem.classList.add("active");
